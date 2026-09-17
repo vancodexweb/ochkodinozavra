@@ -1,0 +1,29 @@
+{
+  "name": "ochkodinozavra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend for the Corporate Finance & Accounting ERP (pro-auth backend) - Next.js 16, Feature-Sliced Design.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@tanstack/react-query": "^5.60.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^20.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^16.3.0",
+    "eslint-plugin-boundaries": "^7.0.0",
+    "prettier": "^3.3.3"
+  }
+}

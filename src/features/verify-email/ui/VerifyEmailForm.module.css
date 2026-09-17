@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.resendRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.resendButton {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-brand-600);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.resendButton:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}

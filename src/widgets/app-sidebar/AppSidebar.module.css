@@ -1,0 +1,29 @@
+.sidebar {
+  width: var(--layout-sidebar-width);
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: var(--space-5) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.link:hover {
+  background: var(--color-bg);
+  text-decoration: none;
+}
+
+.linkActive {
+  background: var(--color-brand-50);
+  color: var(--color-brand-700);
+}

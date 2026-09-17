@@ -1,0 +1,21 @@
+import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
+import { BACKEND_API_URL, REFRESH_COOKIE } from '../../_lib/env';
+import { clearSessionCookies } from '../../_lib/set-session-cookies';
+
+export async function POST() {
+  const cookieStore = await cookies();
+  const refreshToken = cookieStore.get(REFRESH_COOKIE)?.value;
+
+  if (refreshToken) {
+    await fetch(`${BACKEND_API_URL}/auth/logout`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ refreshToken }),
+    }).catch(() => undefined);
+  }
+
+  clearSessionCookies(cookieStore);
+
+  return new NextResponse(null, { status: 204 });
+}
